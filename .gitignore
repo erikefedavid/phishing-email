@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.pytest_cache/
+__pycache__/
+*.pyc
+*.pkl
+*.db
+.env
+backend/data/raw/
+backend/data/processed/
+backend/ml/pipeline.pkl
+backend/ml/vectorizer.pkl
+.DS_Store

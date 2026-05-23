@@ -1,0 +1,14 @@
+fastapi>=0.110
+uvicorn[standard]
+scikit-learn>=1.4
+pandas>=2.0
+numpy>=1.26
+beautifulsoup4
+nltk>=3.8
+joblib
+sqlalchemy>=2.0
+tldextract
+textblob
+pydantic-settings
+pytest
+httpx

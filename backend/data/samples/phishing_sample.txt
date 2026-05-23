@@ -1,0 +1,13 @@
+Subject: Your account has been suspended
+Body:
+Dear valued customer,
+
+We noticed unusual activity on your account. Your account has been temporarily suspended.
+
+To restore access, please verify your identity immediately:
+https://fake-bank.com/verify-now
+
+Failure to verify within 24 hours will result in permanent account closure.
+
+Sincerely,
+Security Team

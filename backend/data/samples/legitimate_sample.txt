@@ -1,0 +1,14 @@
+Subject: Meeting notes from today
+Body:
+Hi team,
+
+Here are the notes from today's sprint planning:
+
+1. Complete authentication module by Friday
+2. Review pull requests before merging
+3. Update API documentation
+
+Let me know if I missed anything.
+
+Best,
+John
