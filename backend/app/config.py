@@ -11,7 +11,7 @@ class Settings(BaseSettings):
     DATABASE_URL: str = "sqlite:///./phishguard.db"
     CORS_ORIGINS: list[str] = [
         "http://localhost:5173",
-        "https://*.up.railway.app",
+        "https://*.vercel.app",
     ]
     MAX_EMAIL_LENGTH: int = 50000
 
