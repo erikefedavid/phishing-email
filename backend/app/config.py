@@ -1,5 +1,7 @@
+import json
 import os
 from pydantic_settings import BaseSettings
+from pydantic import field_validator
 
 
 class Settings(BaseSettings):
@@ -16,6 +18,13 @@ class Settings(BaseSettings):
     MAX_EMAIL_LENGTH: int = 50000
 
     model_config = {"env_file": ".env"}
+
+    @field_validator("CORS_ORIGINS", mode="before")
+    @classmethod
+    def parse_cors(cls, v):
+        if isinstance(v, str):
+            return json.loads(v)
+        return v
 
 
 settings = Settings()
