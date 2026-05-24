@@ -1,4 +1,5 @@
 fastapi>=0.110
+python-multipart
 uvicorn[standard]
 scikit-learn>=1.4
 pandas>=2.0
