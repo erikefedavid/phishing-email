@@ -1,7 +1,8 @@
 import json
 import os
+import re
 from pydantic_settings import BaseSettings
-from pydantic import field_validator
+from pydantic import field_validator, computed_field
 
 
 class Settings(BaseSettings):
@@ -25,6 +26,18 @@ class Settings(BaseSettings):
         if isinstance(v, str):
             return json.loads(v)
         return v
+
+    @computed_field
+    @property
+    def CORS_ORIGIN_REGEX(self) -> str | None:
+        wildcards = [o for o in self.CORS_ORIGINS if "*" in o]
+        if not wildcards:
+            return None
+        patterns = []
+        for w in wildcards:
+            escaped = re.escape(w).replace(r"\*", ".*")
+            patterns.append(escaped)
+        return "|".join(patterns)
 
 
 settings = Settings()
