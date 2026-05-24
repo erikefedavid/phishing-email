@@ -2,7 +2,6 @@ services:
   - type: web
     name: phishguard-backend
     runtime: docker
-    repo: https://github.com/JesusCovenantPC/phis-project
     plan: free
     region: oregon
     dockerfilePath: ./backend/Dockerfile
@@ -10,12 +9,11 @@ services:
       - key: DEBUG
         value: false
       - key: CORS_ORIGINS
-        value: '["http://localhost:5173","https://*.up.railway.app"]'
+        value: '["http://localhost:5173","https://*.onrender.com","https://*.vercel.app"]'
 
   - type: web
     name: phishguard-frontend
     runtime: static
-    repo: https://github.com/JesusCovenantPC/phis-project
     buildCommand: cd frontend && npm install && npm run build
     staticPublishPath: ./frontend/dist
     headers:
@@ -31,4 +29,4 @@ services:
         fromService:
           type: web
           name: phishguard-backend
-          property: host
+          property: url

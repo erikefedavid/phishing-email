@@ -1,6 +1,3 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
-  "env": {
-    "VITE_API_URL": "https://phishing-email-c0n7.onrender.com"
-  }
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
