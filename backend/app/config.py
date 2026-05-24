@@ -15,6 +15,7 @@ class Settings(BaseSettings):
     CORS_ORIGINS: list[str] = [
         "http://localhost:5173",
         "https://*.vercel.app",
+        "https://phishing-email-three.vercel.app",
         "https://*.onrender.com",
     ]
     MAX_EMAIL_LENGTH: int = 50000
